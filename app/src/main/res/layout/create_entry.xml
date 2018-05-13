@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="12sp"
+    android:layout_marginLeft="12sp"
+    android:layout_marginRight="12sp"
+    android:layout_marginTop="22sp"
+    tools:context=".EntryActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarEntry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title : "
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/titleTextView"
+        android:layout_toRightOf="@+id/titleTextView"
+        android:layout_alignTop="@id/titleTextView" />
+
+    <TextView
+        android:id="@+id/linkTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:text="Link : "
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_alignTop="@id/linkTextView"
+        android:layout_toEndOf="@+id/linkTextView"
+        android:layout_toRightOf="@+id/linkTextView"
+        android:inputType="textUri" />
+
+    <TextView
+        android:id="@+id/genreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/linkTextView"
+        android:text="Genre : "
+        android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxKPop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/link"
+        android:layout_marginStart="80dp"
+        android:text="K-Pop"
+        android:textSize="15sp"
+        android:layout_marginLeft="80dp"
+        android:layout_alignParentLeft="true" />
+
+    <CheckBox
+        android:id="@+id/checkBoxMetal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/link"
+        android:text="Metal"
+        android:textSize="15sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="103dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxPop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBoxKPop"
+        android:layout_centerVertical="true"
+        android:text="Pop"
+        android:textSize="15sp"
+        android:layout_alignLeft="@+id/checkBoxKPop" />
+
+    <CheckBox
+        android:id="@+id/checkBoxDangdut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBoxMetal"
+        android:layout_centerVertical="true"
+        android:text="Dangdut"
+        android:textSize="15sp"
+        android:layout_alignLeft="@+id/checkBoxMetal" />
+
+    <CheckBox
+        android:id="@+id/checkBoxRock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBoxPop"
+        android:layout_alignStart="@+id/checkBoxPop"
+        android:text="Rock"
+        android:textSize="15sp"
+        android:layout_alignLeft="@+id/checkBoxPop" />
+
+    <CheckBox
+        android:id="@+id/checkBoxJazz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/checkBoxDangdut"
+        android:layout_alignTop="@+id/checkBoxRap"
+        android:text="Jazz"
+        android:textSize="15sp"
+        android:layout_alignLeft="@+id/checkBoxDangdut" />
+
+    <CheckBox
+        android:id="@+id/checkBoxRap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBoxRock"
+        android:layout_alignStart="@+id/checkBoxRock"
+        android:text="Rap"
+        android:textSize="15sp"
+        android:layout_alignLeft="@+id/checkBoxRock" />
+
+    <CheckBox
+        android:id="@+id/checkBoxHipHop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/checkBoxJazz"
+        android:layout_alignTop="@+id/checkBoxRock"
+        android:text="Hip-Hop"
+        android:textSize="15sp"
+        android:layout_alignLeft="@+id/checkBoxJazz" />
+
+    <TextView
+        android:id="@+id/typeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="198dp"
+        android:text="Type : "
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spinnerType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/typeTextView"
+        android:layout_toEndOf="@id/typeTextView"
+        android:layout_toRightOf="@id/typeTextView" />
+
+    <TextView
+        android:id="@+id/bahasaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/checkBoxJazz"
+        android:text="Bahasa : "
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spinnerBahasa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/bahasaTextView"
+        android:layout_toEndOf="@id/bahasaTextView"
+        android:layout_toRightOf="@id/bahasaTextView" />
+
+    <TextView
+        android:id="@+id/lyricTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="158dp"
+        android:text="Lirik : "
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/lyric"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/lyricTextView"
+        android:layout_toEndOf="@id/lyricTextView"
+        android:layout_toRightOf="@id/lyricTextView"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/submitEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Submit"
+        />
+
+</RelativeLayout>

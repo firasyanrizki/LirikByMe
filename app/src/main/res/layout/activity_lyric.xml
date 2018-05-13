@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title_lyric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title: "
+        android:textSize="25sp" />
+    <TextView
+        android:id="@+id/title_name"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/title_lyric"
+        android:layout_toEndOf="@id/title_lyric"
+        android:layout_alignTop="@id/title_lyric"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/link_lyric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_lyric"
+        android:layout_marginTop="10dp"
+        android:text="Link: "
+        android:textSize="25sp" />
+    <TextView
+        android:id="@+id/link_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/link_lyric"
+        android:layout_toEndOf="@id/link_lyric"
+        android:layout_alignTop="@id/link_lyric"
+        android:autoLink="web"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/text_lyric"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/link_lyric"
+        android:layout_marginTop="10dp"
+        android:text="Lyric: "
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/lyric_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_lyric" />
+</RelativeLayout>
